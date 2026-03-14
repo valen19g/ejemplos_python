@@ -15,8 +15,10 @@ for categoria in categorias:
 choice = input("elegir categoria ").lower()
 if choice not in categorias:
 	print ("no existe esa categoria se usara otros")
-	categorias = "otros"
-word = random.choice(categorias[choice])
+	choice= "otros"
+	word = random.choice(categorias[choice])
+mezcla = random.sample(categorias[choice], len(categorias[choice]))
+word = random.choice(mezcla)
 
 puntaje=0
 while attempts > 0:
